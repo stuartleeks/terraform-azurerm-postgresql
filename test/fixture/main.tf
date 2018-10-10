@@ -41,16 +41,9 @@ module "postgresql" {
 
   firewall_ranges = [
     {
-      name = "test1"
+      start_ip = "0.0.0.0"
 
-      start_ip = "10.0.0.5"
-
-      end_ip = "10.0.0.8"
-    },
-    {
-      start_ip = "127.0.0.0"
-
-      end_ip = "127.0.1.0"
+      end_ip = "255.255.255.255"
     },
   ]
 }
